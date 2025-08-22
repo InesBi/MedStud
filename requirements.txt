@@ -1,0 +1,17 @@
+# --- Core app ---
+streamlit>=1.36.0
+requests>=2.31.0
+
+# --- PDF processing ---
+pymupdf>=1.24.0   # (import as "fitz")
+
+# --- NLP & medical NER ---
+spacy>=3.7.0
+scispacy>=0.5.4
+# SciSpaCy model (medium) — robust medical NER
+# If your environment blocks direct URL installs, comment the line below
+# and install manually with: python -m spacy download en_core_sci_md
+en-core-sci-md @ https://github.com/allenai/scispacy/releases/download/v0.5.4/en_core_sci_md-0.5.4.tar.gz
+
+# --- Optional visualization for Insights dashboard (lightweight) ---
+plotly>=5.22.0
