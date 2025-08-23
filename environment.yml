@@ -1,0 +1,17 @@
+name: medstud
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - setuptools
+  - wheel
+  - pip:
+      - streamlit
+      - requests
+      - plotly
+      - pymupdf==1.24.9
+      - spacy==3.7.5
+      - scispacy==0.5.4
+      - https://github.com/allenai/scispacy/releases/download/v0.5.4/en_core_sci_md-0.5.4.tar.gz
