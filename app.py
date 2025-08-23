@@ -3,8 +3,15 @@ from components.upload_pdf import upload_pdf_section
 from components.quiz import quiz_section
 from components.planner import planner_section
 from components.recommendations import recommendations_section
-
+def ensure_state():
+    ss = st.session_state
+    ss.setdefault("pdf_data", None)
+    ss.setdefault("questions", [])
+    ss.setdefault("q_idx", 0)
+    ss.setdefault("score", 0)
+    ss.setdefault("finished", False)
 def main():
+    ensure_state()
     st.set_page_config(page_title="MedStud", layout="wide")
     st.title("Medical Study Companion")
 
